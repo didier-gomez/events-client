@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+.profile-card {
+    max-width: 80vh;
+    height: 100%;
+  }
+  
+.profile-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+.account-container {
+    width: 100%;
+    height: 70%;
+    margin-top: 5vh;
+    text-align: center;
+    @include md {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.card-header{
+    height: 20vh;
+}
+.card-content {
+    height: 40vh;
+}
