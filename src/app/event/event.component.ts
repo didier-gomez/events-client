@@ -14,7 +14,7 @@ const EVENTS: Event[] = [
     name: 'Wonderland Fest',
     slug: 'wonderland-2019',
     date: new Date('2019-01-01'),
-    location: 'Zayulita',
+    location: 'Monterrey',
     isActive: true
   },
 ];
