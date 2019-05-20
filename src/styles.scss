@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import "./assets/scss/mixins";
 @import "./assets/scss/variables";
+@import "./assets/scss/fonts";
 html, body {
     height: 100%;
+    margin: 0 0;
 }
 .container {
     height: 100%;

@@ -3,11 +3,7 @@
     max-width: 80vh;
     height: 100%;
   }
-  
-.profile-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-}
+ 
 .account-container {
     width: 100%;
     height: 70%;
@@ -19,9 +15,24 @@
         align-items: center;
     }
 }
-.card-header{
-    height: 20vh;
-}
 .card-content {
     height: 40vh;
+}
+.profile-header-image {
+    height: 20vh;
+}
+.mat-card-avatar {
+    width: auto; 
+}
+.avatar {
+    border-radius: 50%;
+}
+body {
+    height: auto;
+}
+.mat-card-title {
+    padding-top: 32px;
+}
+.mat-chip-list-wrapper {
+    width: 66.6%;
 }

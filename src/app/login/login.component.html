@@ -1,3 +1,64 @@
-<p>
-  login works!
-</p>
+<div class="full-width full-h limiter">
+  <div class="login-container container-login100">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+          <form [formGroup]="registerForm" class="login100-form validate-form" (ngSubmit)="onSubmit()">
+            <span class="login100-form-title p-b-49">
+              Teotilive
+            </span>
+
+            <mat-form-field class="field form-group">
+              <input matInput placeholder="Usuario" formControlName="username">
+              <mat-error *ngIf="f.username.errors">
+                <div *ngIf="f.username.errors.required">Nombre de usuario requerido</div>
+                <div *ngIf="f.username.errors.minlength">Mínimo 6 caracteres</div>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="field form-group">
+              <input matInput placeholder="Contraseña" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hidePassword = !hidePassword">
+                {{hidePassword ? 'visibility_off' : 'visibility'}}
+              </mat-icon>
+              <mat-error *ngIf="f.password.errors">
+                <div *ngIf="f.password.errors.required">Contraseña requerida</div>
+                <div *ngIf="f.password.errors.minlength">Mínimo 5 caracteres</div>
+              </mat-error>
+            </mat-form-field>
+            
+            <div class="container-login100-form-btn field">
+              <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn ">
+                  Login
+                </button>
+              </div>
+            </div>
+            
+            <div class="flex-c-m">
+              <button (click)="facebookLogin()" mat-stroked-button class=" bg1 btn-social field"> 
+                <mat-icon fontSet="fab" fontIcon="fa-facebook-square"></mat-icon>
+                Acceder con Facebook
+              </button>
+
+              <a href="#" mat-stroked-button class="btn-social  bg3 field">
+                <mat-icon fontSet="fab" fontIcon="fa-google"></mat-icon>
+                Acceder con Google        
+              </a>
+            </div>
+            
+            <div class="txt1 p-b-17">
+							¿No tienes cuenta?
+						</div>
+            <div class="container-login100-form-btn field register-btn ">
+              <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn ">
+                  Registrarse
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+  </div>
+</div>

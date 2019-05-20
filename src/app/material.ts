@@ -1,6 +1,8 @@
 import {
   MatButtonModule, MatCheckboxModule, MatSidenavModule, MatToolbarModule,
-  MatIconModule, MatListModule, MatTableModule, MatCardModule
+  MatIconModule, MatListModule, MatTableModule, MatCardModule,
+  MatFormFieldModule, MatInputModule, MatExpansionModule, MatChipsModule,
+  MatAutocompleteModule, MatSnackBarModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -14,6 +16,11 @@ import { NgModule } from '@angular/core';
     MatListModule,
     MatTableModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatChipsModule,
+    MatAutocompleteModule,MatSnackBarModule,
   ],
   exports: [
     MatButtonModule,
@@ -23,7 +30,12 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatChipsModule,
+    MatAutocompleteModule,MatSnackBarModule,
   ]
 })
 export class MaterialModule {}
