@@ -1,23 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from './Event'
-const EVENTS: Event[] = [
-  {
-    id: 1,
-    name: 'Ritual Fest',
-    slug: 'ritual-2020',
-    date: new Date('2020-01-01'),
-    location: 'Zayulita',
-    isActive: true
-  },
-  {
-    id: 2,
-    name: 'Wonderland Fest',
-    slug: 'wonderland-2019',
-    date: new Date('2019-01-01'),
-    location: 'Monterrey',
-    isActive: true
-  },
-];
+import { EventService } from '../services/event.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-event',
@@ -26,11 +11,19 @@ const EVENTS: Event[] = [
 })
 
 export class EventComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'slug', 'date'];
-  dataSource = EVENTS;
-  constructor() { }
+  displayedColumns: string[] = ['name', 'slug', 'date', 'options'];
+  private data: Event[];
+  constructor(private eventsService: EventService, private router: Router) {
+
+   }
 
   ngOnInit() {
+    this.data = this.eventsService.getEvents();
+
   }
 
+  public editar(id: number){
+    console.log(id);
+    this.router.navigate( ['event/edit/'+ id] );
+  }
 }

@@ -7,6 +7,7 @@ import { AccountComponent } from './account/account.component';
 import { AuthGuard } from './auth/auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { PreferencesComponent } from './preferences/preferences.component';
+import { EventEditComponent } from './event/edit/edit.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard],
       children: [
        { path: 'event', component: EventComponent },
+       { path: 'event/edit/:id', component: EventEditComponent},
        { path: 'account', component: AccountComponent },
        { path: 'preferences', component: PreferencesComponent },
        { path: '**', redirectTo: ''}

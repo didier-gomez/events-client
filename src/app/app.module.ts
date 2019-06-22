@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { SocialLoginModule, AuthServiceConfig } from 'angular5-social-login';
 import { FacebookLoginProvider } from 'angular5-social-login';
 import { PreferencesComponent } from './preferences/preferences.component';
+import { EventEditComponent } from './event/edit/edit.component';
 
 const config = new AuthServiceConfig([
   {
@@ -35,7 +36,8 @@ export function provideConfig() {
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    EventEditComponent
   ],
   imports: [
     BrowserModule,

@@ -92,6 +92,7 @@ export class PreferencesComponent implements OnInit {
         this.appAuthService.setUser(res.data);
         this.router.navigateByUrl('/');
       } else {
+        console.log(res.error);
         this.snackBar.open('Hubo un error al guardar tus preferencias', 'Cerrar', {
           duration: 2000,
         });

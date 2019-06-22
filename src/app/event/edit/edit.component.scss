@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    @include sm {
+        width: 80%;
+      }
+      @include md {
+        width: 40%;
+      }
+}
+
+
+
+  .login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include md {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  }
