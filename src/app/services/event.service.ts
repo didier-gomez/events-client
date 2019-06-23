@@ -34,17 +34,17 @@ export class EventService {
 
     constructor(private http: HttpClient, private router: Router) { }
 
-    public savePreferences(categories: string[], userId: string): Observable<any> {
-        const body = {categories: categories, user_id: userId};
-        return this.http.post(`${this.SERVER}/user/categories`, body)
-            .pipe(
-                tap((res: any) => {
-                    return res;
-            })
-        );
+    public updateEvents(events: Event[] ){
+      localStorage.setItem("events", JSON.stringify(events));
     }
 
     public getEvents(){
+      let aux = localStorage.getItem("events");
+      if(aux){
+        return JSON.parse(aux);
+      }else{
+        localStorage.setItem("events", JSON.stringify(EVENTS));
         return EVENTS;
+      }
     }
 }

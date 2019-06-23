@@ -22,7 +22,6 @@ export class EventEditComponent implements OnInit {
       this.event = this.events.find(event => {
         return event.id == id
       });
-      console.log(this.event);
     })
   }
 
